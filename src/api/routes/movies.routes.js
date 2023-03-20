@@ -16,8 +16,8 @@ router.get('/year/:year', getMovieByYear);
 
 router.post('/', postMovie);
 
-router.put('/', putMovie);
+router.put('/:id', putMovie);
 
-router.delete('/', deleteMovie);
+router.delete('/:id', deleteMovie);
 
 module.exports = router;
