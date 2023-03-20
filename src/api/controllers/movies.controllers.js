@@ -56,21 +56,9 @@ const postMovie = async (rec, res) => {
         const newMovie = new Movie(rec.body);
         const createdMovie = await newMovie.save();
         return res.status(201).json(createdMovie);
-
-        // const newMovie = new Movie({
-        //     title: rec.body.title,
-        //     director: rec.body.director,
-        //     year: rec.body.year,
-        //     genre: rec.body.genre
-        // });
-
-        // const createdMovie = await newMovie.save();
-        // return res.status(201).json(createdMovie);
-        // res.send('Este es mi post');
     } catch (error) {
         return res.status(500).json(error);
     }
-    
 }
 
 const putMovie = async (rec, res) => {
