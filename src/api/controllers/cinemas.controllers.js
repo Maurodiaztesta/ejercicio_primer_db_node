@@ -12,7 +12,7 @@ const getCine = async (rec, res) => {
 const getCineById = async (req, res) => {
     try {
         const {id} = req.params;
-        const cine = await Cine.findById(id);
+        const cine = await Cine.findById(id); //.populate("movies");
         if(!cine){
             return res.status(404).json({ "message": "cine not found"});
         }
